@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Software Lab</string>
+    <string name="login">Login</string>
+    <string name="remember_your_password">Remember your password?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="farmereats">FarmerEats</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="send_code">Send Code</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="or_login_with">or login with</string>
+    <string name="join_the_movement">Join the movement!</string>
+</resources>

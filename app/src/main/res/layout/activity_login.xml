@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="250dp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="start"
+            android:text="@string/farmereats"
+            android:textColor="#4F4F4F"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/emailCardView"
+            app:layout_constraintEnd_toEndOf="@+id/emailCardView"
+            app:layout_constraintStart_toStartOf="@id/emailCardView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/emailCardView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            app:cardBackgroundColor="#14000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/textColorSecondaryDark"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/passwordCardView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="18dp"
+            app:cardBackgroundColor="#14000000"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/login"
+            app:layout_constraintEnd_toEndOf="@+id/emailCardView"
+            app:layout_constraintStart_toStartOf="@+id/emailCardView"
+            app:layout_constraintTop_toBottomOf="@+id/emailCardView">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_outline_lock_24">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfit_regular"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/textColorSecondaryDark"
+                    android:textColorHint="@color/textColorSecondary"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            style="@style/Material.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:fontFamily="@font/outfit_regular"
+            android:padding="17dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="50dp"
+            app:elevation="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/forget"
+            app:layout_constraintEnd_toEndOf="@+id/emailCardView"
+            app:layout_constraintStart_toStartOf="@+id/emailCardView"
+            app:layout_constraintTop_toBottomOf="@+id/passwordCardView" />
+
+        <TextView
+            android:id="@+id/forget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center"
+            android:text="@string/or_login_with"
+            android:textColor="@color/grey_20"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/facebookCardView"
+            app:layout_constraintEnd_toEndOf="@+id/emailCardView"
+            app:layout_constraintStart_toStartOf="@+id/emailCardView"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/googleCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="55dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/appleCardView"
+            app:layout_constraintStart_toStartOf="@id/emailCardView"
+            app:layout_constraintTop_toBottomOf="@+id/forget"
+            app:strokeColor="@color/grey_20"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/login_google"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="11dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_google" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/appleCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/googleCardView"
+            app:layout_constraintEnd_toStartOf="@+id/facebookCardView"
+            app:layout_constraintStart_toEndOf="@+id/googleCardView"
+            app:layout_constraintTop_toTopOf="@+id/googleCardView"
+            app:strokeColor="@color/grey_20"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/login_apple"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_apple" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/facebookCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/googleCardView"
+            app:layout_constraintEnd_toEndOf="@id/emailCardView"
+            app:layout_constraintStart_toEndOf="@+id/appleCardView"
+            app:layout_constraintTop_toTopOf="@+id/googleCardView"
+            app:strokeColor="@color/grey_20"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/login_facebook"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_facebook" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
